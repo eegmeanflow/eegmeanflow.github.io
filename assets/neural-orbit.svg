@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" viewBox="0 0 440 220" fill="none">
+  <defs>
+    <linearGradient id="trace" x1="156" y1="81" x2="285" y2="143" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A58CEB"/><stop offset=".52" stop-color="#7864D2"/><stop offset="1" stop-color="#5ABBBF"/>
+    </linearGradient>
+    <linearGradient id="surface" x1="171" y1="48" x2="282" y2="177" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF"/><stop offset="1" stop-color="#EEECFA"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop stop-color="#C9BDF2" stop-opacity=".26"/><stop offset="1" stop-color="#C9BDF2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%">
+      <feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#8B7EB0" flood-opacity=".13"/>
+    </filter>
+    <style>
+      .orbit-flow{stroke-dasharray:5 16;animation:flow 34s linear infinite}
+      .orbit-flow.reverse{animation-direction:reverse;animation-duration:42s}
+      .pulse{animation:breathe 5s ease-in-out infinite}
+      .pulse.late{animation-delay:-2.5s}
+      .signal{stroke-dasharray:320;stroke-dashoffset:0;animation:signal 9s ease-in-out infinite}
+      .neural-core{animation:float 7s ease-in-out infinite;transform-origin:220px 110px}
+      @keyframes flow{to{stroke-dashoffset:-420}}
+      @keyframes breathe{0%,100%{opacity:.35}50%{opacity:.7}}
+      @keyframes signal{0%,100%{opacity:.65}50%{opacity:1}}
+      @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+      @media(prefers-reduced-motion:reduce){.orbit-flow,.pulse,.signal,.neural-core{animation:none}}
+    </style>
+  </defs>
+  <ellipse cx="220" cy="111" rx="192" ry="106" fill="url(#halo)"/>
+  <g stroke-width="1">
+    <ellipse cx="220" cy="111" rx="181" ry="60" stroke="#DFDAEE" transform="rotate(-13 220 111)"/>
+    <ellipse cx="220" cy="111" rx="155" ry="78" stroke="#E0E4ED" transform="rotate(16 220 111)"/>
+    <ellipse cx="220" cy="111" rx="181" ry="60" stroke="#AC97DD" class="orbit-flow" transform="rotate(-13 220 111)" opacity=".54"/>
+    <ellipse cx="220" cy="111" rx="155" ry="78" stroke="#71BDBD" class="orbit-flow reverse" transform="rotate(16 220 111)" opacity=".44"/>
+  </g>
+  <g stroke="#DCD6ED" stroke-width="1.1">
+    <path d="M76 79L151 96M98 161L164 135M344 52L281 83M361 143L282 128M203 27L212 52M252 193L245 167"/>
+    <path d="M51 115L76 79M344 52L383 94M361 143L331 176" stroke-dasharray="2 5"/>
+  </g>
+  <g class="neural-core" filter="url(#shadow)">
+    <circle cx="220" cy="110" r="65" fill="url(#surface)" stroke="#DAD2EF"/>
+    <circle cx="220" cy="110" r="58" stroke="#E9E3F5"/>
+    <g stroke="url(#trace)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M217 77C211 64 194 67 190 79C177 79 173 90 176 100C165 107 169 123 180 127C177 141 188 149 200 144C208 153 219 145 220 138V84C220 81 219 79 217 77Z"/>
+      <path d="M223 77C229 64 246 67 250 79C263 79 267 90 264 100C275 107 271 123 260 127C263 141 252 149 240 144C232 153 221 145 220 138"/>
+      <path d="M190 79C189 88 196 92 204 90M176 100C184 96 191 101 192 108M180 127C185 121 192 122 197 127M200 144C195 137 201 131 207 132M250 79C251 88 244 92 236 90M264 100C256 96 249 101 248 108M260 127C255 121 248 122 243 127M240 144C245 137 239 131 233 132" opacity=".65"/>
+    </g>
+    <rect x="162" y="105" width="116" height="17" rx="8.5" fill="#F7F6FD" fill-opacity=".93"/>
+    <path class="signal" d="M163 114H181L187 111L194 117L200 102L206 128L213 95L221 123L227 110L233 115L241 112L247 115H277" stroke="url(#trace)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g>
+    <circle cx="76" cy="79" r="16" fill="#EAE3F8" class="pulse"/>
+    <circle cx="76" cy="79" r="7" fill="#FFF" stroke="#B69BE6" stroke-width="1.5"/>
+    <circle cx="76" cy="79" r="3" fill="#A88AD8"/>
+    <circle cx="344" cy="52" r="14" fill="#DFF0EF" class="pulse late"/>
+    <circle cx="344" cy="52" r="6" fill="#FFF" stroke="#77BDBD" stroke-width="1.5"/>
+    <circle cx="344" cy="52" r="2.5" fill="#72B9B7"/>
+    <circle cx="98" cy="161" r="6" fill="#FCFBFF" stroke="#AAA0D2" stroke-width="1.5"/>
+    <circle cx="361" cy="143" r="7" fill="#FFF" stroke="#BFA8DF" stroke-width="1.5"/>
+    <circle cx="361" cy="143" r="3" fill="#C1A8E1"/>
+    <circle cx="203" cy="27" r="4" fill="#B5A0DB"/>
+    <circle cx="252" cy="193" r="4" fill="#92C7C6"/>
+    <circle cx="51" cy="115" r="2.5" fill="#C6BCDC"/>
+    <circle cx="383" cy="94" r="2.5" fill="#B1D6D5"/>
+    <circle cx="331" cy="176" r="2.5" fill="#C5B6E1"/>
+  </g>
+  <g stroke-linecap="round" stroke-width="1.25" opacity=".7">
+    <path d="M118 41V49M114 45H122" stroke="#B5A0DB"/>
+    <path d="M300 182V190M296 186H304" stroke="#89BEBF"/>
+    <path d="M393 153V159M390 156H396" stroke="#C3B4DE"/>
+  </g>
+</svg>
